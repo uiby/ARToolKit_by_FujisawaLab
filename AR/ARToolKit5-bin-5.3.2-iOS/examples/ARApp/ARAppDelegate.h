@@ -46,8 +46,9 @@
 //  Author(s): Philip Lamb
 //
 
+//クラスの宣言.実装ファイルでヘッダーファイルを読み込む必要がある
 @class ARViewController;
-
+//ARAppDelegateクラスの定義.クラスに関連付けられる変数領域と関数を宣言
 @interface ARAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     ARViewController *viewController;
