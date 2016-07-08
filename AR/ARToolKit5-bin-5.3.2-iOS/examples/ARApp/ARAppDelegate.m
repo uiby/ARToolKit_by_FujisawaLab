@@ -49,9 +49,10 @@
 #import "ARAppDelegate.h"
 #import "ARViewController.h"
 
-
+//クラスARAppDelegateの実装
 @implementation ARAppDelegate
 
+//インスタンス変数のセッターとゲッター
 @synthesize window;
 @synthesize viewController;
 
@@ -59,6 +60,7 @@
     
     // Override point for customization after app launch    
     
+    //iosアプリケーションの初期化
     // Set working directory so that camera parameters, models etc. can be loaded using relative paths.
     arUtilChangeToResourcesDirectory(AR_UTIL_RESOURCES_DIRECTORY_BEHAVIOR_BEST, NULL);
     
@@ -67,19 +69,23 @@
 }
 
 // Application has been interrupted, by e.g. a phone call.
+//アプリを開いたまま別のアプリを使ってる場合(閉じてない状態)
 - (void)applicationWillResignActive:(UIApplication *)application {
-    viewController.paused = TRUE;
+    viewController.paused = TRUE; //viewControllerをpause状態に移行
 }
 
 // The interruption ended.
+//アプリを再び使用した時(中断してたのを再開した時)
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    viewController.paused = FALSE;
+    viewController.paused = FALSE;//viewControllerのpause状態を解除
 }
 
 // User pushed home button. Save state etc.
+//アプリを終了する場合
 - (void)applicationWillTerminate:(UIApplication *)application {
 }
 
+//メモリの開放
 - (void)dealloc {
     
     [viewController release];
