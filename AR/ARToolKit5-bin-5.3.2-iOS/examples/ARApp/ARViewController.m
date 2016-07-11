@@ -51,7 +51,8 @@
 #import <AR/gsub_es2.h>
 #import <AudioToolbox/AudioToolbox.h> // SystemSoundID, AudioServicesCreateSystemSoundID()
 
-#define VIEW_SCALEFACTOR        1.0f
+//定数定義
+#define VIEW_SCALEFACTOR        1.0f  //倍率
 #define VIEW_DISTANCE_MIN        5.0f          // Objects closer to the camera than this will not be displayed.
 #define VIEW_DISTANCE_MAX        2000.0f        // Objects further away from the camera than this will not be displayed.
 
@@ -63,33 +64,34 @@
 
 @implementation ARViewController {
     
-    BOOL            running;
-    NSInteger       runLoopInterval;
-    NSTimeInterval  runLoopTimePrevious;
-    BOOL            videoPaused;
+    BOOL            running;  //動作してるかどうか
+    NSInteger       runLoopInterval; //動作インターバル
+    NSTimeInterval  runLoopTimePrevious;//前回のループ時間
+    BOOL            videoPaused;  //映像がポーズ中かどうか
     
-    // Video acquisition
-    AR2VideoParamT *gVid;
+    // Video acquisition(映像の取得)
+    AR2VideoParamT *gVid;  //ポインタで定義
     
-    // Marker detection.
+    // Marker detection.(マーカーの検知)
     ARHandle       *gARHandle;
     ARPattHandle   *gARPattHandle;
     long            gCallCountMarkerDetect;
     
-    // Transformation matrix retrieval.
+    // Transformation matrix retrieval.(行列変換)
     AR3DHandle     *gAR3DHandle;
-    ARdouble        gPatt_width;            // Per-marker, but we are using only 1 marker.
+    ARdouble        gPatt_width;            // Per-marker, but we are using only 1 marker.(1つのマーカーのみ使用)
     ARdouble        gPatt_trans[3][4];      // Per-marker, but we are using only 1 marker.
     int             gPatt_found;            // Per-marker, but we are using only 1 marker.
     int             gPatt_id;               // Per-marker, but we are using only 1 marker.
     BOOL            useContPoseEstimation;
     
-    // Drawing.
+    // Drawing.(描画)
     ARParamLT      *gCparamLT;
     ARView         *glView;
     ARGL_CONTEXT_SETTINGS_REF arglContextSettings;
 }
 
+//同名のメンバ変数を指定.詳しい説明→https://gist.github.com/uneco/1358266
 @synthesize glView;
 @synthesize arglContextSettings;
 @synthesize running, runLoopInterval;
@@ -103,6 +105,7 @@
     return self;
 }
 */
+//*** 初期化設定 ***//
 
 - (void)loadView
 {
@@ -110,6 +113,7 @@
     
     // This will be overlaid with the actual AR view.
     NSString *irisImage = nil;
+    //iPhoneかiPadの判別
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         irisImage = @"Iris-iPad.png";
     }  else { // UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone
@@ -120,8 +124,9 @@
             irisImage = @"Iris.png";
         }
     }
+    //領域の確保.生成
     UIView *irisView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:irisImage]] autorelease];
-    irisView.userInteractionEnabled = YES;
+    irisView.userInteractionEnabled = YES;  //タップイベントを取得
     self.view = irisView;
 }
 

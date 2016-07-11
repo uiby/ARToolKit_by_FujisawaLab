@@ -55,6 +55,7 @@
 // An ARViewController manages a single ARView, into which drawing is performed.
 //
 
+//#import--Objective-Cのプリプロセッサ命令  #include--C言語のプリプロセッサ命令
 #import <QuartzCore/QuartzCore.h>
 #include <AR/ar.h>
 #include <AR/video.h>
@@ -62,16 +63,21 @@
 #import <AR/sys/CameraVideo.h>
 #import "../ARAppCore/EAGLView.h"
 
+//クラス名を前方宣言
 @class ARView;
 @interface ARViewController : UIViewController <CameraVideoTookPictureDelegate, EAGLViewTookSnapshotDelegate> {
 }
-
+// -()メソッド名: インスタンスメソッドの宣言
 - (IBAction)start;
 - (IBAction)stop;
 - (void) processFrame:(AR2VideoBufferT *)buffer;
 
 - (void)takeSnapshot;
 
+//@property:セッターとゲッターを定義
+// readonly: getterのみ生成
+// getter=メソッド名: getterの名前を設定
+// nonatomic:スレッドセーフ(マルチスレッド環境でライブラリやプログラム、クラスなどが複数スレッドから同時に利用されても問題なく動作すること)でない単純なgetter,setterを生成
 @property (readonly) ARView *glView;
 @property (readonly) ARGL_CONTEXT_SETTINGS_REF arglContextSettings;
 
