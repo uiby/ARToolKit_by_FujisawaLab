@@ -48,7 +48,7 @@
 #ifndef AR_MULTI_H
 #define AR_MULTI_H
 
-#include <AR/ar.h>
+#include "ar.h"
 
 
 #ifdef __cplusplus

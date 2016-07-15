@@ -71,8 +71,8 @@
 #    include <sys/errno.h>
 #  endif
 #endif
-#include <AR/config.h>
-#include <AR/arConfig.h>
+#include "config.h"
+#include "arConfig.h"
 #ifdef __ANDROID__
 #  include <jni.h>
 #  include <android/log.h>
@@ -191,8 +191,8 @@ typedef double            ARdouble;
 }
 #endif
 
-#include <AR/matrix.h>
-#include <AR/icp.h>
+#include "matrix.h"
+#include "icp.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -401,8 +401,8 @@ typedef struct {
 }
 #endif
 
-#include <AR/param.h>
-#include <AR/arImageProc.h>
+#include "param.h"
+#include "arImageProc.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -38,7 +38,7 @@
 #ifndef ARMARKERSQUARE_H
 #define ARMARKERSQUARE_H
 
-#include <ARWrapper/ARMarker.h>
+#include "ARMarker.h"
 
 #define    AR_PATTERN_TYPE_TEMPLATE    0
 #define    AR_PATTERN_TYPE_MATRIX      1

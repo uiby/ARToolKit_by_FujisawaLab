@@ -55,7 +55,7 @@
 #ifndef AR_FILTERTRANSMAT_H
 #define AR_FILTERTRANSMAT_H
 
-#include <AR/ar.h>
+#include "ar.h"
 
 #ifdef __cplusplus
 extern "C" {

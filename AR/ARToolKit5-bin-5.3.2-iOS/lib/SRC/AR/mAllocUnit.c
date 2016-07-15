@@ -53,7 +53,7 @@
 #else
 #include <stdlib.h>
 #endif
-#include <AR/ar.h>
+#include "ar.h"
 
 ARMat *arMatrixAllocUnit(int dim)
 {

@@ -38,7 +38,7 @@
 #ifndef AR_LABELING_PRIVATE_H
 #define AR_LABELING_PRIVATE_H
 
-#include <AR/config.h>
+#include "config.h"
 
 #ifdef __cplusplus
 extern "C" {

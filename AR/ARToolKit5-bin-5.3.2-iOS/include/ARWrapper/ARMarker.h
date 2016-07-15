@@ -38,11 +38,11 @@
 #ifndef ARMARKER_H
 #define ARMARKER_H
 
-#include <AR/ar.h>
-#include <AR/arFilterTransMat.h>
+#include "ar.h"
+#include "arFilterTransMat.h"
 
-#include <ARWrapper/Image.h>
-#include <ARWrapper/ARPattern.h>
+#include "Image.h"
+#include "ARPattern.h"
 
 #include <vector>
 

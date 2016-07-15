@@ -45,8 +45,8 @@
  *
  *******************************************************/
 
-#include <AR/ar.h>
-#include <AR/icp.h>
+#include "ar.h"
+#include "icp.h"
 
 AR3DHandle *ar3DCreateHandle(ARParam *arParam)
 {

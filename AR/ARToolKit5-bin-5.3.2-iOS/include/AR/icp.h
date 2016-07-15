@@ -39,7 +39,7 @@
 #define ICP_H
 
 #include <stdio.h>
-#include <AR/icpCore.h>
+#include "icpCore.h"
 
 #ifdef __cplusplus
 extern "C" {

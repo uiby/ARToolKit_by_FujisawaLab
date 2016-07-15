@@ -48,7 +48,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h> // memset()
-#include <AR/ar.h>
+#include "ar.h"
 #include "arLabelingPrivate.h"
 
 #if defined(AR_PIXEL_FORMAT_CCC)

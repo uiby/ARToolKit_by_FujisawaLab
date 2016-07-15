@@ -41,16 +41,16 @@
 #ifndef ARCONTROLLER_H
 #define ARCONTROLLER_H
 
-#include <ARWrapper/Platform.h>
+#include "Platform.h"
 
-#include <AR/ar.h>
-#include <AR/arMulti.h>
-#include <AR/video.h>
+#include "ar.h"
+#include "arMulti.h"
+#include "video.h"
 
-#include <ARWrapper/Image.h>
-#include <ARWrapper/VideoSource.h>
-#include <ARWrapper/ARMarker.h>
-#include <ARWrapper/ARMarkerSquare.h>
+#include "Image.h"
+#include "VideoSource.h"
+#include "ARMarker.h"
+#include "ARMarkerSquare.h"
 #include <ARWrapper/ARMarkerMulti.h>
 #if HAVE_NFT
 #  include <AR2/tracking.h>

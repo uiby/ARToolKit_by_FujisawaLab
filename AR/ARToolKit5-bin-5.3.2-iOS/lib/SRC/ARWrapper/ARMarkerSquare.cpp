@@ -35,8 +35,8 @@
  *
  */
 
-#include <ARWrapper/ARMarkerSquare.h>
-#include <ARWrapper/ARController.h>
+#include "ARMarkerSquare.h"
+#include "ARController.h"
 #ifndef MAX
 #  define MAX(x,y) (x > y ? x : y)
 #endif

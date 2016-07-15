@@ -38,11 +38,11 @@
 #ifndef ARPATTERN_H
 #define ARPATTERN_H
 
-#include <AR/ar.h>
+#include "ar.h"
 #if HAVE_NFT
 #  include <AR2/imageSet.h>
 #endif
-#include <ARWrapper/Image.h>
+#include "Image.h"
 
 /**
  * Encapsulates information about a sub-component of a marker useful for

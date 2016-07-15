@@ -130,11 +130,12 @@
     self.view = irisView;
 }
 
+//画面ロード後実行
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];//スーパークラスのメソッド実行
     
-    // Init instance variables.
+    // Init instance variables.変数の初期化
     glView = nil;
     gVid = NULL;
     gCparamLT = NULL;

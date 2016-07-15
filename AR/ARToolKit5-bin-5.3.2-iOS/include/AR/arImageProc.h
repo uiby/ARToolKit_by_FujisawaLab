@@ -45,7 +45,7 @@
 #  define FALSE 0
 #endif
 
-#include <AR/config.h>
+#include "config.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -82,7 +82,7 @@ typedef struct _ARImageProcInfo ARImageProcInfo;
 }
 #endif
 
-#include <AR/ar.h>
+#include "ar.h"
 
 #ifdef __cplusplus
 extern "C" {
